@@ -1,0 +1,187 @@
+:root {
+  --White-main-heading-stats: hsl(0, 0%, 100%);
+  --Slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+  --Very-dark-blue-main-background: hsl(233, 47%, 7%);
+  --Dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+  --Soft-violet-accent: hsl(277, 64%, 61%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+  /* 10px */
+  min-height: 100vh;
+  position: relative;
+}
+@media screen and (max-width: 70rem) {
+  body {
+    font-size: 45%;
+  }
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-dark-blue-main-background);
+}
+.container .card {
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 80rem;
+  height: 65vh;
+  display: flex;
+}
+@media screen and (max-width: 70rem) {
+  .container .card {
+    height: 80vh;
+    max-width: 18rem;
+    flex-direction: column;
+  }
+}
+.container .card .info {
+  width: 50%;
+  background-color: var(--Dark-desaturated-blue-card-background);
+  padding: 6.25rem;
+  padding-right: 6.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 70rem) {
+  .container .card .info {
+    width: 100%;
+    height: 80%;
+    order: 1;
+    padding: 1.5rem;
+    text-align: center;
+  }
+}
+.container .card .info .title {
+  color: var(--White-main-heading-stats);
+  font-size: 3.5em;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 70rem) {
+  .container .card .info .title {
+    margin-bottom: 0;
+  }
+}
+.container .card .info .title span {
+  color: var(--Soft-violet-accent);
+}
+.container .card .info .summary {
+  color: var(--Slightly-transparent-white-main-paragraph);
+  font-size: 1.5em;
+  line-height: 1.75;
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 70rem) {
+  .container .card .info .summary {
+    font-size: 1.75em;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0 0.75rem;
+  }
+}
+.container .card .info .items-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1.75rem;
+}
+@media screen and (max-width: 70rem) {
+  .container .card .info .items-list {
+    padding-right: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container .card .info .items-list .item:not(:last-child) {
+  margin-bottom: 1.75rem;
+}
+.container .card .info .items-list .item .highlight {
+  color: var(--White-main-heading-stats);
+  font-size: 2.5em;
+  margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 70rem) {
+  .container .card .info .items-list .item .highlight {
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+}
+.container .card .info .items-list .item .figureheads {
+  font-size: 1.275em;
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--Slightly-transparent-white-stat-headings);
+}
+.container .card .info .items-list .item .capital,
+.container .card .info .items-list .item .figureheads {
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+.container .card .image-wrapper {
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(145, 51, 204, 0.4),
+      rgba(145, 51, 204, 0.4)
+    ),
+    url(../images/image-header-desktop.jpg);
+  background-size: cover;
+  background-position: top;
+}
+@media screen and (max-width: 70rem) {
+  .container .card .image-wrapper {
+    width: 100%;
+    height: 30%;
+    background-image: linear-gradient(
+        to right,
+        rgba(145, 51, 204, 0.4),
+        rgba(145, 51, 204, 0.4)
+      ),
+      url(../images/image-header-mobile.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.attribution {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.7rem;
+}
+.attribution a {
+  color: #3e52a3;
+}
+@media screen and (max-width: 20rem) {
+  .attribution {
+    display: none;
+  }
+} /*# sourceMappingURL=main.css.map */
